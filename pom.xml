@@ -41,12 +41,6 @@
             <scope>runtime</scope>
             <version>8.0.13</version>
         </dependency>
-
-        <!--        <dependency>-->
-<!--            <groupId>org.postgresql</groupId>-->
-<!--            <artifactId>postgresql</artifactId>-->
-<!--            <scope>runtime</scope>-->
-<!--        </dependency>-->
         <!--Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -95,7 +89,7 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <configuration>
                     <driver>org.postgresql.Driver</driver>
-                    <url>jdbc:mysql://127.0.0.1:3306/bootdb</url>
+                    <url>jdbc:mysql://127.0.0.1:3307/bootdb</url>
                     <user>root</user>
                     <password>root</password>
                     <baselineOnMigrate>true</baselineOnMigrate>

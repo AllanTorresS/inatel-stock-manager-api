@@ -1,34 +1,34 @@
 version: "3"
 services:
-  inatel-database:
+  inatel-stocks-database:
     image: mysql:8
     restart: always
-    container_name: "inatel-database"
+    container_name: "inatel-stocks-database"
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=bootdb
       - TZ=GMT
     ports:
-      - 3306:3306
-      - 33060:33060
+      - 3307:3306
+      - 33061:33060
     networks:
       - inatel-network
 
-  acert-api:
+  inatel-stock-api:
     build: .
-    container_name: "inatel-api"
+    container_name: "inatel-stock-api"
     env_file:
       - docker-compose.env
     ports:
-      - 8081:8081
+      - 8080:8080
     networks:
       - inatel-network
     depends_on:
-      - inatel-database
+      - inatel-stocks-database
 
 networks:
   inatel-network:
-    driver: bridge
+   driver: bridge
 
 
 

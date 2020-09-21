@@ -10,16 +10,15 @@ import java.util.Date;
 import java.util.Map;
 
 @Entity
-@Table(name = "history")
+@Table(name = "stock")
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class History {
+public class Stock {
 
     @Id
     @EqualsAndHashCode.Include
     private String id;
 
-    @ElementCollection
-    private Map<String, String> quotes;
+    private String description;
 
 }
